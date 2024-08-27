@@ -1,5 +1,5 @@
 import type { Component } from 'solid-js'
-import { A } from 'solid-start'
+import { A, useParams, useNavigate } from '@solidjs/router'
 import { DarkSwitcher } from './DarkSwitcher'
 import { availableLocales } from '~/locales'
 

@@ -1,4 +1,4 @@
-import { useNavigate } from 'solid-start'
+import { A, useParams, useNavigate } from '@solidjs/router'
 
 export default function () {
   const [t] = useI18n()

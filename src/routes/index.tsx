@@ -1,4 +1,5 @@
-import { useNavigate } from 'solid-start'
+import { A, useParams, useNavigate } from '@solidjs/router'
+// import { useNavigate } from 'solid-start'
 import NameInput from '~/components/NameInput'
 
 export default function Home() {

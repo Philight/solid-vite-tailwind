@@ -1,7 +1,8 @@
 // @refresh reload
-import { Suspense } from 'solid-js'
-import { Body, Head, Html, Link, Meta, Scripts, Title } from 'solid-start'
-import { ErrorBoundary } from 'solid-start/error-boundary'
+import { Suspense, ErrorBoundary } from 'solid-js'
+import { Body, Head, Html, Link, Meta, Scripts, Title } from '@solidjs/meta'
+// import { MetaProvider, Title } from "@solidjs/meta";
+
 import DefaultLayout from './layouts/default'
 import { I18nProvider } from './locales'
 import './styles/root.css'

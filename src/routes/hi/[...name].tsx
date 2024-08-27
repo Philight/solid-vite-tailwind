@@ -1,6 +1,5 @@
-import { A } from '@solidjs/router'
+import { A, useParams, useNavigate } from '@solidjs/router'
 import { For, Show } from 'solid-js'
-import { useNavigate, useParams } from 'solid-start'
 import { names, setNames } from '~/store/user'
 
 export default function () {

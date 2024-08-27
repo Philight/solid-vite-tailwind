@@ -1,6 +1,6 @@
 import type { Component } from 'solid-js'
-import { Routes } from '@solidjs/router'
-import { FileRoutes } from 'solid-start'
+import { Router } from '@solidjs/router'
+import { FileRoutes } from '@solidjs/start/router'
 import Footer from '~/components/Footer'
 
 const DefaultLayout: Component = () => {
@@ -14,9 +14,9 @@ const DefaultLayout: Component = () => {
 
   return (
     <main class="px-4 py-10 text-center text-gray-700 dark:text-gray-200">
-      <Routes>
+      <Router>
         <FileRoutes />
-      </Routes>
+      </Router>
       <Footer />
     </main>
   )

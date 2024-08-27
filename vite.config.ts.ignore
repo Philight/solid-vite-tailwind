@@ -1,24 +1,30 @@
-import Solid from 'solid-start/vite'
-import Markdown from 'vite-plugin-solid-markdown'
-import remarkGfm from 'remark-gfm'
-import rehypePrettyCode from 'rehype-pretty-code'
 import AutoImport from 'unplugin-auto-import/vite'
 import { defineConfig } from 'vitest/config'
-import Unocss from 'unocss/vite'
-import { VitePWA } from 'vite-plugin-pwa'
-import nodeAdapter from 'solid-start-node'
-import staticAdapter from 'solid-start-static'
-import netlifyAdapter from 'solid-start-netlify'
-import vercelAdapter from 'solid-start-vercel'
-import awsAdapter from 'solid-start-aws'
 
-const adapterMap = {
-  node: nodeAdapter(),
-  static: staticAdapter(),
-  netlify: netlifyAdapter(),
-  vercel: vercelAdapter(),
-  aws: awsAdapter(),
-}
+// import Markdown from 'vite-plugin-solid-markdown'
+import Markdown from 'vite-plugin-markdown-solid'
+import rehypePrettyCode from 'rehype-pretty-code'
+import remarkGfm from 'remark-gfm'
+
+import { VitePWA } from 'vite-plugin-pwa'
+import SolidPlugin from 'vite-plugin-solid'
+// import Solid from 'solid-start/vite'
+
+// import nodeAdapter from 'solid-start-node'
+// import staticAdapter from 'solid-start-static'
+// import netlifyAdapter from 'solid-start-netlify'
+// import vercelAdapter from 'solid-start-vercel'
+// import awsAdapter from 'solid-start-aws'
+
+import Unocss from 'unocss/vite'
+
+// const adapterMap = {
+//   node: nodeAdapter(),
+//   static: staticAdapter(),
+//   netlify: netlifyAdapter(),
+//   vercel: vercelAdapter(),
+//   aws: awsAdapter(),
+// }
 
 const isTauri = process.env.TAURI === 'true'
 
@@ -38,10 +44,14 @@ export default defineConfig({
       remarkPlugins: [remarkGfm],
     }),
     // https://github.com/solidjs/solid-start
-    Solid({
+    // Solid({
+    //   extensions: ['.mdx', '.md'],
+    //   // @ts-expect-error - missing types
+    //   adapter: adapterMap[process.env.ADAPTER || 'static'],
+    //   ssr: !isTauri,
+    // }),
+    SolidPlugin({
       extensions: ['.mdx', '.md'],
-      // @ts-expect-error - missing types
-      adapter: adapterMap[process.env.ADAPTER || 'static'],
       ssr: !isTauri,
     }),
 
@@ -90,6 +100,9 @@ export default defineConfig({
           },
         }),
   ],
+  server: {
+    port: 3000,
+  },
   ssr: {},
   // to make use of `TAURI_DEBUG` and other env variables
   // https://tauri.studio/v1/api/config#buildconfig.beforedevcommand
