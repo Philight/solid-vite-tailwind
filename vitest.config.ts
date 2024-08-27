@@ -6,7 +6,7 @@ import Markdown from 'vite-plugin-markdown-solid'
 import rehypePrettyCode from 'rehype-pretty-code'
 import remarkGfm from 'remark-gfm'
 
-import { VitePWA } from 'vite-plugin-pwa'
+// import { VitePWA } from 'vite-plugin-pwa'
 import SolidPlugin from 'vite-plugin-solid'
 // import Solid from 'solid-start/vite'
 
@@ -16,7 +16,7 @@ import SolidPlugin from 'vite-plugin-solid'
 // import vercelAdapter from 'solid-start-vercel'
 // import awsAdapter from 'solid-start-aws'
 
-import Unocss from 'unocss/vite'
+// import Unocss from 'unocss/vite'
 
 // const adapterMap = {
 //   node: nodeAdapter(),
@@ -29,7 +29,20 @@ import Unocss from 'unocss/vite'
 const isTauri = process.env.TAURI === 'true'
 
 export default defineConfig({
-  plugins: [SolidPlugin()],
+  plugins: [
+    SolidPlugin(),
+
+    // https://github.com/antfu/unplugin-auto-import
+    AutoImport({
+      imports: [
+        'solid-js',
+        // {
+        //   '@solid-primitives/i18n': ['useI18n'],
+        // },
+      ],
+      dts: './src/auto-imports.d.ts',
+    }),
+  ],
 
   // https://github.com/vitest-dev/vitest
   test: {

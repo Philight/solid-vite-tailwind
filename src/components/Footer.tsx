@@ -4,7 +4,7 @@ import { DarkSwitcher } from './DarkSwitcher'
 import { availableLocales } from '~/locales'
 
 const Footer: Component = () => {
-  const [t, { locale }] = useI18n()
+  // const [t, { locale }] = useI18n()
   const [index, setIndex] = createSignal(0)
   const toggleLocales = () => {
     setIndex((index() + 1) % availableLocales.length)
@@ -13,19 +13,19 @@ const Footer: Component = () => {
 
   return (
     <nav class="flex gap-4 mt-6 text-xl justify-center">
-      <A class="icon-btn" href="/" title={t('btn_home')}>
+      {/*      <A class="icon-btn" href="/" title={t('btn_home')}>
         <div class="i-carbon-campsite" />
-      </A>
+      </A>*/}
 
       <DarkSwitcher />
-
+      {/*
       <a class="icon-btn" title={t('btn_toggle_langs')} onClick={toggleLocales}>
         <div i-carbon-language />
       </a>
 
       <A class="icon-btn" title={t('btn_about')} href="/about">
         <div i-carbon-dicom-overlay />
-      </A>
+      </A>*/}
 
       <A class="icon-btn" title="Tauri App" href="/tauri">
         <div i-carbon-application-web />

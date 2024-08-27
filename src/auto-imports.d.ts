@@ -48,6 +48,5 @@ declare global {
   const splitProps: typeof import('solid-js')['splitProps']
   const untrack: typeof import('solid-js')['untrack']
   const useContext: typeof import('solid-js')['useContext']
-  const useI18n: typeof import('@solid-primitives/i18n')['useI18n']
   const useTransition: typeof import('solid-js')['useTransition']
 }
