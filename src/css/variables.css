@@ -1,0 +1,129 @@
+@layer base {
+  :root {
+    /** 
+    TYPOGRAPHY 
+  */
+
+    /* FALLBACK */
+
+    --font-serif: 'Georgia', 'Baskerville', 'Palatino', 'Times New Roman', serif;
+    --font-sans-serif: 'Garamond', 'Gill Sans', 'Tahoma', 'Helvetica', 'Verdana', 'Arial', sans-serif;
+    --font-mono: 'Andalé Mono', 'Lucida', 'Monaco', 'Consolas', 'Courier', monospace;
+    --font-cursive: 'Bradley Hand', 'Brush Script MT', 'Comic Sans MS', cursive;
+    --font-fantasy: 'Luminari', fantasy;
+
+    /* FAMILIES */
+
+    --font-family-playfair-display: 'Playfair Display';
+    --font-family-gwendolyn: 'Gwendolyn';
+    --font-family-oooh-baby: 'Oooh Baby';
+    --font-family-sedgwick-awe: 'Sedgwick Ave';
+
+    /* SETTINGS */
+
+    --font-family-heading: var(--font-family-playfair-display), var(--font-serif);
+    --font-family-subheading: var(--font-family-playfair-display), var(--font-serif);
+    --font-family-body: var(--font-family-playfair-display), var(--font-serif);
+    --font-family-btn: var(--font-family-playfair-display), var(--font-sans-serif);
+    --font-family-highlight: var(--font-family-gwendolyn), var(--font-cursive);
+
+    /** 
+    COLOR 
+  */
+
+    /* BASE */
+
+    --color-red: 255 0 0;
+    --color-green: 0 255 0;
+    --color-blue: 0 0 255;
+    --color-white: 255 255 255;
+    --color-black: 0 0 0;
+
+    --color-gray: 197 197 197;
+    --color-gray-light: 241 241 241;
+    --color-gray-dark: 159 159 159;
+    --color-gray-darker: 106 106 106;
+
+    /* PALETTE */
+
+    --color-jamaica-green: 0 155 58;
+    --color-jamaica-yellow: 254 209 0;
+    --color-jamaica-black: 0 0 0;
+
+    --color-jamaica-original-green: 0 119 73;
+    --color-jamaica-original-yellow: 255 184 28;
+    --color-jamaica-original-black: 45 41 38;
+
+    --color-pink-dark: 214 0 180;
+    --color-pink-neon: 250 55 186;
+
+    --color-black-dark: 31 34 31;
+    --color-black-jamaica: var(--color-jamaica-original-black);
+
+    --color-yellow-jamaica-original: var(--color-jamaica-original-yellow);
+    --color-yellow-jamaica: var(--color-jamaica-yellow);
+    --color-yellow-neon: 253 255 176;
+
+    --color-green-jamaica-original: var(--color-jamaica-original-green);
+    --color-green-jamaica: var(--color-jamaica-green);
+    --color-green-neon: 0 242 57;
+
+    /* PRIMARY */
+
+    --color-primary-white: 255 255 255;
+    --color-primary-black: 12 20 26;
+    --color-primary-blue: 0 60 86;
+    --color-primary-red: 255 50 50;
+    /*   
+--color-white-primary: 255 255 255;
+  --color-black-primary: 12 20 26;
+  --color-blue-primary: 0 60 86;
+  --color-red-primary: 255 50 50; 
+  */
+
+    --color-primary: var(--color-green-neon);
+    --color-secondary: var(--color-pink-neon);
+    --color-tertiary: var(--color-hermes-orange);
+
+    /** 
+   * EFFECTS 
+  */
+
+    --box-shadow-neon-sm: 2px 0px 4px, -2px 0px 4px, 0px 2px 4px, 0px -2px 4px;
+    --box-shadow-neon: 2px 0px 6px, -2px 0px 4px, 0px 2px 4px, 0px -2px 4px, inset 0px -2px 4px, inset 0px 2px 4px;
+    --box-shadow-neon-full: 2px 0px 8px, -2px 0px 8px, 0px 2px 4px, 0px -2px 4px, inset 0px -4px 12px, inset 0px 4px 12px, inset -4px 0px 12px,
+      inset 4px 0px 12px;
+    --box-shadow-neon-light-yellow: 2px 0px 8px rgba(253, 255, 176, 1), -2px 0px 8px rgba(253, 255, 176, 1), 0px 2px 4px rgba(253, 255, 176, 1),
+      0px -2px 4px rgba(253, 255, 176, 1), inset 0px -4px 12px rgba(253, 255, 176, 1), inset 0px 4px 12px rgba(253, 255, 176, 1),
+      inset -4px 0px 12px rgba(253, 255, 176, 1), inset 4px 0px 12px rgba(253, 255, 176, 1);
+
+    /** 
+    LAYOUT 
+  */
+
+    --max-width: 1440px;
+
+    --gutter-outer-x: 20px;
+    --gutter-outer-y: 40px;
+    --header-height: 48px;
+    --announcement-height: 0px;
+
+    /*
+  --gutter-section: 16px;
+*/
+
+    @media screen(tab-sm) {
+      --gutter-outer-x: 40px;
+      --header-height: 64px;
+    }
+    @media screen(desk-sm) {
+      --gutter-outer-x: 64px;
+      --gutter-outer-y: 64px;
+    }
+    @media screen(desk-lg) {
+      --gutter-outer-x: 80px;
+      --gutter-outer-y: 80px;
+      --header-height: 80px;
+    }
+  }
+}

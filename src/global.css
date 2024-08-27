@@ -1,0 +1,12 @@
+/* lightbox */
+/* @import 'yet-another-react-lightbox/styles.css'; */
+/* @import 'yet-another-react-lightbox/dist/styles.css';
+@import 'yet-another-react-lightbox/dist/plugins/captions/captions.css';
+@import 'yet-another-react-lightbox/dist/plugins/thumbnails/thumbnails.css'; */
+
+/* carousel */
+/* @import 'slick-carousel/slick/slick.css'; */
+/* @import 'slick-carousel/slick/slick-theme.css'; */
+
+/* Tailwind */
+@import './css/tailwind.css';

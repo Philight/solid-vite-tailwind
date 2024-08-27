@@ -4,6 +4,8 @@ import { Router } from "@solidjs/router";
 import { FileRoutes } from "@solidjs/start/router";
 import { MetaProvider, Title, Link, Meta } from "@solidjs/meta";
 
+import "./global.css";
+
 // =================================================================
 
 export default function Root() {
