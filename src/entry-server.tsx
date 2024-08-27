@@ -1,14 +1,7 @@
 // @refresh reload
-import { createHandler, StartServer } from '@solidjs/start/server'
+import { createHandler, StartServer } from "@solidjs/start/server";
 
-// export default createHandler(renderAsync((event) => <StartServer event={event} />))
-
-// export default createHandler(() => <StartServer />, {
-//   mode: 'async',
-// })
-
-// import 'uno.css'
-// import '@unocss/reset/tailwind.css'
+// =================================================================
 
 export default createHandler(() => (
   <StartServer
@@ -27,4 +20,4 @@ export default createHandler(() => (
       </html>
     )}
   />
-))
+));

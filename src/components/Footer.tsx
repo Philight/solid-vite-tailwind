@@ -3,6 +3,8 @@ import { A, useParams, useNavigate } from '@solidjs/router'
 import { DarkSwitcher } from './DarkSwitcher'
 import { availableLocales } from '~/locales'
 
+// =================================================================
+
 const Footer: Component = () => {
   // const [t, { locale }] = useI18n()
   const [index, setIndex] = createSignal(0)

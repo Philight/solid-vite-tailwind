@@ -1,5 +1,7 @@
 import type { Component, JSX } from 'solid-js'
 
+// =================================================================
+
 const Input: Component<JSX.InputHTMLAttributes<HTMLInputElement>> = (props) => {
   // const [t] = useI18n()
   return (

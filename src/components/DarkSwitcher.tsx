@@ -1,6 +1,8 @@
 import { createPrefersDark } from '@solid-primitives/media'
 // import { createEffect } from 'solid-js'
 
+// =================================================================
+
 export function DarkSwitcher() {
   const prefersDark = createPrefersDark()
 
