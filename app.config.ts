@@ -73,7 +73,12 @@ export default defineConfig({
         //   dts: './src/auto-imports.d.ts',
         // }),
         VinxiAutoImport({
-          imports: ["solid-js"],
+          imports: [
+            "solid-js",
+            {
+              "@solid-primitives/destructure": ["destructure"],
+            },
+          ],
           dts: "./src/auto-imports.d.ts",
         }),
 
@@ -144,6 +149,8 @@ export default defineConfig({
         // produce sourcemaps for debug builds
         sourcemap: !!process.env.TAURI_DEBUG,
       },
+
+      optimizeDeps: {},
 
       // https://github.com/vitest-dev/vitest
       test: {
