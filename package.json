@@ -15,15 +15,20 @@
     "lint": "eslint . --ext .ts,.tsx,.md,.mdx",
     "lint:fix": "eslint . --fix --ext .ts,.tsx,.md,.mdx",
     "typecheck": "tsc --noEmit --skipLibCheck",
+    "msw:update": "npx msw init public",
     "tauri:dev": "tauri dev",
     "tauri:build": "tauri build"
   },
   "dependencies": {
+    "@solid-primitives/destructure": "^0.1.17",
     "@solid-primitives/i18n": "^2.1.1",
+    "@solid-primitives/lifecycle": "^0.0.102",
     "@solid-primitives/media": "^2.2.5",
     "@solid-primitives/storage": "^2.1.1",
     "@solidjs/start": "^1.0.6",
     "@tauri-apps/api": "^1.5.1",
+    "graphql": "^16.9.0",
+    "node-fetch": "^3.3.2",
     "solid-js": "^1.8.18"
   },
   "devDependencies": {
@@ -46,6 +51,7 @@
     "cypress": "^13.6.1",
     "eslint": "^8.55.0",
     "jsdom": "^20.0.3",
+    "msw": "^2.4.0",
     "pnpm": "^7.33.6",
     "postcss": "^8.4.41",
     "postcss-import": "^16.1.0",
@@ -63,5 +69,10 @@
     "vite-plugin-pwa": "^0.17.4",
     "vite-plugin-solid": "^2.10.2",
     "vitest": "^1.0.1"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
   }
 }
