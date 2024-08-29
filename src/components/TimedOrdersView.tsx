@@ -1,14 +1,16 @@
 import type { Component, JSX } from "solid-js";
-import {
-  m,
-  useMotionValue,
-  useTransform,
-  animate,
-  MotionValue,
-} from "framer-motion";
+import { clientOnly } from "@solidjs/start";
+import { isHydrated } from "@solid-primitives/lifecycle";
 
 import { links } from "~/router";
-import { Tabs, DaySelectRow, TimeSelectContainer } from "~/components";
+import {
+  Tabs,
+  DaySelectRow,
+  TimeSelectContainer,
+  ClientOnly,
+} from "~/components";
+// const TimeSelectContainer = clientOnly(() => import("./TimeSelectContainer"));
+// const TimeSelectContainer = lazy(() => import("./TimeSelectContainer"));
 
 // ====================================================================================
 
@@ -43,12 +45,13 @@ interface IComponentProps extends IGenericProps {}
 export function TimedOrdersView({
   class: classProp,
 }: IComponentProps): IGenericComponent {
-  // const parentClass = () => props.class;
-
   return (
     <div class={[`timed-orders-view__c`, classProp].css()}>
       <DaySelectRow />
-      <TimeSelectContainer />
+      <ClientOnly>
+        <TimeSelectContainer />
+      </ClientOnly>
+      {isHydrated()}
     </div>
   );
 }

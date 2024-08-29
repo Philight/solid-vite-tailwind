@@ -12,20 +12,20 @@
  */
 
 ::-webkit-scrollbar {
-  width: 0.9em;
+  width: 0.8em;
   height: 2em;
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(0, 242, 57, 1);
 }
 
 ::-webkit-scrollbar-button {
   background: black;
 }
 
+::-webkit-scrollbar-thumb {
+  background: #f77a23;
+}
+
 ::-webkit-scrollbar-track-piece {
-  background: #d600b4;
+  background: #000;
 }
 
 ::-webkit-scrollbar-track {

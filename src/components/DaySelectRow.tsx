@@ -67,14 +67,8 @@ export function DaySelectRow(props: IComponentProps): IGenericComponent {
       setActive(index);
       setOrder("daySelected", true);
       const date = e.currentTarget?.attributes["data-date"]?.value;
-      console.log("order", order.times());
       setParams(date);
-      console.log("order", order.times());
     }
-    // UI day index
-    // setActive((prev) => (prev === index() ? null : index()));
-    // setActive(index);
-    // Date data value
   };
 
   return (

@@ -223,7 +223,14 @@
   .tabs__tab {
     @apply relative basis-1/4 py-2.5;
     @apply bg-[#333a50] rounded-lg  shadow cursor-pointer;
-    &:hover {
+    &.active {
+      @apply bg-[#495063];
+
+      .icon__c.icon-checkmark {
+        @apply block;
+      }
+    }
+    &:hover:not(.active) {
       @apply bg-[#495063];
     }
     .icon__c:not(.icon-checkmark) {
@@ -233,7 +240,7 @@
       }
     }
     .icon__c.icon-checkmark {
-      @apply absolute -top-1.5 -right-1 w-4 h-4 p-0.5;
+      @apply hidden absolute -top-1.5 -right-1 w-4 h-4 p-0.5 pt-px;
       @apply bg-[#2cc175] rounded-full;
       .icon {
         @apply bg-primary-white/70;

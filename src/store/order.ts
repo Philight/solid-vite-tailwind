@@ -1,5 +1,5 @@
 import nodeFetch from "node-fetch";
-import { isHydrated } from "@solid-primitives/lifecycle";
+// import { isHydrated } from "@solid-primitives/lifecycle";
 
 import api from "~/utils/api";
 import { isDefined } from "~/utils/helpers";
@@ -41,8 +41,8 @@ const [data, { mutate, refetch }] = createResource(params, fetchData);
 
 const [order, setOrder] = createStore<any>({
   date: params,
-  // times: () => DEFAULT_DATA,
   daySelected: true,
+  // times: () => DEFAULT_DATA,
   times: ["errored", "unresolved"].includes(data.state)
     ? () => DEFAULT_DATA
     : data,
