@@ -15,7 +15,7 @@
     "lint": "eslint . --ext .ts,.tsx,.md,.mdx",
     "lint:fix": "eslint . --fix --ext .ts,.tsx,.md,.mdx",
     "typecheck": "tsc --noEmit --skipLibCheck",
-    "msw:update": "npx msw init public",
+    "msw:init": "npx msw init public",
     "tauri:dev": "tauri dev",
     "tauri:build": "tauri build"
   },
@@ -27,6 +27,7 @@
     "@solid-primitives/storage": "^2.1.1",
     "@solidjs/start": "^1.0.6",
     "@tauri-apps/api": "^1.5.1",
+    "axios": "^1.7.5",
     "graphql": "^16.9.0",
     "node-fetch": "^3.3.2",
     "solid-js": "^1.8.18"

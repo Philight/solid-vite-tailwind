@@ -1,6 +1,10 @@
 import nodeFetch from "node-fetch";
 import { isHydrated } from "@solid-primitives/lifecycle";
 
+import api from "~/utils/api";
+import { isDefined } from "~/utils/helpers";
+import { DEFAULT_DATA } from "./DEFAULT_DATA";
+
 // ====================================================================================
 
 function wait(milliseconds) {
@@ -16,17 +20,17 @@ function wait(milliseconds) {
  * or equal to the optional data passed: `refetch(info)`
  */
 const fetchData = async (source, { value, refetching }) => {
+  if (!isDefined(source)) return;
+
   await wait(1000);
-  // const response = await fetch(`https://swapi.dev/api/people/6/`);
-  if (isHydrated()) {
-    const response = await window.fetch(`/api/order/times`);
-    // console.log("fetchData", await response.json());
-    return response.json();
-  } else {
-    // const response = await nodeFetch(
-    //   new URL(`/api/order/times`, "http://localhost:3333"),
-    // );
-  }
+  // if (isHydrated()) {
+  return api
+    .get("/api/order/times")
+    .then(async (res: any) => {
+      return res.data;
+    })
+    .catch((e) => console.error(e));
+  // }
 };
 
 // ====================================================================================
@@ -37,7 +41,11 @@ const [data, { mutate, refetch }] = createResource(params, fetchData);
 
 const [order, setOrder] = createStore<any>({
   date: params,
-  times: data ?? [],
+  // times: () => DEFAULT_DATA,
+  daySelected: true,
+  times: ["errored", "unresolved"].includes(data.state)
+    ? () => DEFAULT_DATA
+    : data,
 });
 
 export { order, setOrder, setParams, refetch };

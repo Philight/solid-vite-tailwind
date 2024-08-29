@@ -1,9 +1,11 @@
-import { A, useParams, useNavigate } from '@solidjs/router'
+import { A, useParams, useNavigate } from "@solidjs/router";
+
+// =================================================================
 
 export default function () {
   // const [t] = useI18n()
-  const navigate = useNavigate()
-  const goBack = () => navigate(-1)
+  const navigate = useNavigate();
+  const goBack = () => navigate(-1);
   return (
     <main class="px-4 py-10 text-center text-sky-800 dark:text-gray-200">
       {/*<h1>{t('not_found')}</h1>*/}
@@ -16,5 +18,5 @@ export default function () {
         </button>
       </div>
     </main>
-  )
+  );
 }

@@ -26,8 +26,6 @@ export const handlers = [
     });
   }),
   http.get("/api/order/times", () => {
-    console.log("/api/order/times");
-
     return HttpResponse.json({
       Status: 200,
       Message: "OK",

@@ -18,6 +18,7 @@ netlify
 
 # Temp
 gitignore
+.env
 
 # System Files
 .DS_Store

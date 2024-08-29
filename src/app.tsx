@@ -4,7 +4,9 @@ import { Router } from "@solidjs/router";
 import { FileRoutes } from "@solidjs/start/router";
 import { MetaProvider, Title, Link, Meta } from "@solidjs/meta";
 
+import { OrderProvider } from "~/contexts";
 import "./global.css";
+import "./utils/prototype";
 
 // =================================================================
 
@@ -23,7 +25,9 @@ export default function Root() {
             name="description"
             content="Opinionated Vite Starter Template"
           />
-          <Suspense>{props.children}</Suspense>
+          <Suspense>
+            <OrderProvider>{props.children}</OrderProvider>
+          </Suspense>
         </MetaProvider>
       )}
     >
