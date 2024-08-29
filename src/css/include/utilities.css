@@ -44,9 +44,9 @@
   OTHER
  */
 
-.action {
+/* .action {
   @apply cursor-pointer;
-}
+} */
 
 .show-mobile {
   @media screen(desk-sm) {

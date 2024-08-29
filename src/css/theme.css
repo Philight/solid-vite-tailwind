@@ -1,277 +1,278 @@
+@import "./include/utilities";
+
 /* 
   BREAKPOINTS
   1. mob-lg | 2. tab-sm | 3. tab-lg  | 4. desk-md 
   APPLY IN COMPONENTS / PAGES CUSTOMIZATION
+  TODO
 */
 
 /** 
  * SCROLLBAR & CURSOR
  */
 
-@layer utilities {
-  ::-webkit-scrollbar {
-    width: 0.9em;
-    height: 2em;
-  }
+::-webkit-scrollbar {
+  width: 0.9em;
+  height: 2em;
+}
 
-  ::-webkit-scrollbar-thumb {
-    background: rgba(0, 242, 57, 1);
-  }
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 242, 57, 1);
+}
 
-  ::-webkit-scrollbar-button {
-    background: black;
-  }
+::-webkit-scrollbar-button {
+  background: black;
+}
 
-  ::-webkit-scrollbar-track-piece {
-    background: #d600b4;
-  }
+::-webkit-scrollbar-track-piece {
+  background: #d600b4;
+}
 
-  ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-  }
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
 
-  /** 
+/** 
  * LAYOUT SETTINGS
  */
 
-  .gutter-outer-x {
-    @apply px-gutter-outer-x;
-  }
+.gutter-outer-x {
+  @apply px-gutter-outer-x;
+}
 
-  .gutter-outer-y {
-    @apply py-gutter-outer-y;
-  }
+.gutter-outer-y {
+  @apply py-gutter-outer-y;
+}
 
-  .page-max-w {
-    @apply gutter-outer-x mx-auto max-w-default;
-  }
+.page-max-w {
+  @apply gutter-outer-x mx-auto max-w-default;
+}
 
-  .section-spacing {
-    @apply mt-16;
-  }
+.section-spacing {
+  @apply mt-16;
+}
 
-  /** 
+/** 
   TYPOGRAPHY
  */
 
-  .heading {
-    @apply font-heading;
-  }
-  .heading--xl {
-    @apply text-4xl-plus desk-lg:text-5xl; /*  */
-    @apply font-normal;
-    @apply uppercase;
-    @apply tracking-normal;
-  }
-  .heading--lg {
-    @apply text-3xl tab-sm:text-3xl-plus desk-lg:text-4xl; /*  */
-    @apply font-normal;
-    @apply uppercase;
-    @apply tracking-1;
-  }
-  .heading--md {
-    @apply text-lg tab-sm:text-xl desk-lg:text-2xl;
-    @apply font-normal;
-    @apply tracking-1;
-  }
-  .heading--sm {
-    @apply text-base desk-sm:text-sm;
-    @apply tracking-1;
-  }
-  .heading--xs {
-    @apply text-sm;
-    @apply tracking-2;
-  }
-  .heading--2xs {
-    @apply text-3xs tab-sm:text-2xs desk-md:text-sm;
-    @apply lowercase;
-    @apply tracking-3;
-  }
+.heading {
+  @apply font-heading;
+}
+.heading--xl {
+  @apply text-4xl-plus desk-lg:text-5xl; /*  */
+  @apply font-normal;
+  @apply uppercase;
+  @apply tracking-normal;
+}
+.heading--lg {
+  @apply text-3xl tab-sm:text-3xl-plus desk-lg:text-4xl; /*  */
+  @apply font-normal;
+  @apply uppercase;
+  @apply tracking-1;
+}
+.heading--md {
+  @apply text-lg tab-sm:text-xl desk-lg:text-2xl;
+  @apply font-normal;
+  @apply tracking-1;
+}
+.heading--sm {
+  @apply text-base desk-sm:text-sm;
+  @apply tracking-1;
+}
+.heading--xs {
+  @apply text-sm;
+  @apply tracking-2;
+}
+.heading--2xs {
+  @apply text-3xs tab-sm:text-2xs desk-md:text-sm;
+  @apply lowercase;
+  @apply tracking-3;
+}
 
-  .subheading {
-    @apply font-subheading;
-  }
-  .subheading--lg {
-    @apply text-2xl;
-  }
-  .subheading--md {
-    @apply text-lg;
-  }
-  .subheading--sm {
-    @apply text-base;
-    @apply tracking-1;
-  }
+.subheading {
+  @apply font-subheading;
+}
+.subheading--lg {
+  @apply text-2xl;
+}
+.subheading--md {
+  @apply text-lg;
+}
+.subheading--sm {
+  @apply text-base;
+  @apply tracking-1;
+}
 
-  .body {
-    @apply font-body;
-  }
-  .body--xl {
-    @apply text-2xl;
-    @apply font-semibold;
-    @apply tracking-1;
-  }
-  .body--lg {
-    @apply text-xl;
-    @apply tracking-normal;
-  }
-  .body--md {
-    @apply text-base;
-    @apply tracking-1;
-  }
-  .body--sm {
-    @apply text-xs;
-  }
+.body {
+  @apply font-body;
+}
+.body--xl {
+  @apply text-2xl;
+  @apply font-semibold;
+  @apply tracking-1;
+}
+.body--lg {
+  @apply text-xl;
+  @apply tracking-normal;
+}
+.body--md {
+  @apply text-base;
+  @apply tracking-1;
+}
+.body--sm {
+  @apply text-xs;
+}
 
-  .btn-text {
-    @apply font-btn;
-  }
-  .btn-text--lg {
-    @apply text-base tab-sm:text-xl;
-    @apply tracking-1;
-  }
-  .btn-text--md {
-    @apply text-sm;
-  }
-  .btn-text--sm {
-    @apply text-xs-plus tab-sm:text-sm;
-    @apply tracking-2;
-    @apply uppercase;
-  }
+.btn-text {
+  @apply font-btn;
+}
+.btn-text--lg {
+  @apply text-base tab-sm:text-xl;
+  @apply tracking-1;
+}
+.btn-text--md {
+  @apply text-sm;
+}
+.btn-text--sm {
+  @apply text-xs-plus tab-sm:text-sm;
+  @apply tracking-2;
+  @apply uppercase;
+}
 
-  .highlight-text {
-    @apply font-highlight;
-  }
-  .highlight-text--lg {
-    @apply text-5xl;
-    @apply font-semibold;
-    @apply tracking-normal;
-  }
-  .highlight-text--md {
-    @apply text-3xl;
-    @apply font-light;
-    @apply tracking-1;
-  }
-  /** 
+.highlight-text {
+  @apply font-highlight;
+}
+.highlight-text--lg {
+  @apply text-5xl;
+  @apply font-semibold;
+  @apply tracking-normal;
+}
+.highlight-text--md {
+  @apply text-3xl;
+  @apply font-light;
+  @apply tracking-1;
+}
+/** 
   BUTTON VARIANTS
  */
 
-  .btn {
-    @apply action inline-flex cursor-pointer items-center shadow outline-none;
-    @apply rounded;
+.btn {
+  @apply cursor-pointer inline-flex cursor-pointer items-center shadow outline-none;
+  @apply rounded;
+}
+
+.btn--standard {
+  @apply bg-secondary text-primary-white;
+  transition:
+    background-color 0.5s ease-in-out,
+    color 0.4s ease-in-out;
+  &:hover {
+    @apply bg-primary;
+    @apply text-primary-black;
   }
+}
 
-  .btn--standard {
-    @apply bg-secondary text-primary-white;
-    transition:
-      background-color 0.5s ease-in-out,
-      color 0.4s ease-in-out;
-    &:hover {
-      @apply bg-primary;
-      @apply text-primary-black;
-    }
+.btn--outline {
+  @apply font-light;
+  @apply border border-solid border-secondary bg-transparent text-secondary;
+
+  transition: opacity ease-in-out 0.4s;
+  &:hover {
+    @apply opacity-80;
   }
+}
 
-  .btn--outline {
-    @apply font-light;
-    @apply border border-solid border-secondary bg-transparent text-secondary;
+.btn--primary {
+  @apply bg-primary text-white-primary;
 
-    transition: opacity ease-in-out 0.4s;
-    &:hover {
-      @apply opacity-80;
-    }
+  transition:
+    background-color 0.5s ease-in-out,
+    color 0.4s ease-in-out;
+  &:hover {
   }
+}
 
-  .btn--primary {
-    @apply bg-primary text-white-primary;
+.btn--secondary {
+  @apply bg-secondary text-white-primary;
 
-    transition:
-      background-color 0.5s ease-in-out,
-      color 0.4s ease-in-out;
-    &:hover {
-    }
+  transition:
+    background-color 0.5s ease-in-out,
+    color 0.4s ease-in-out;
+  &:hover {
   }
+}
 
-  .btn--secondary {
-    @apply bg-secondary text-white-primary;
-
-    transition:
-      background-color 0.5s ease-in-out,
-      color 0.4s ease-in-out;
-    &:hover {
-    }
-  }
-
-  /** 
+/** 
  * BUTTON SIZE 
  */
 
-  .btn--lg {
-    @apply btn-text btn-text--lg;
-    @apply h-10 px-6 pb-1 pt-px;
-    @media screen(tab-sm) {
-      @apply px-8;
-    }
+.btn--lg {
+  @apply btn-text btn-text--lg;
+  @apply h-10 px-6 pb-1 pt-px;
+  @media screen(tab-sm) {
+    @apply px-8;
   }
+}
 
-  .btn--md {
-    @apply btn-text btn-text--md;
-    @apply h-8 px-6 py-0.5;
-  }
+.btn--md {
+  @apply btn-text btn-text--md;
+  @apply h-8 px-6 py-0.5;
+}
 
-  .btn--sm {
-    @apply btn-text btn-text--sm;
-    @apply h-5 px-6 py-0.5 pt-1;
-  }
+.btn--sm {
+  @apply btn-text btn-text--sm;
+  @apply h-5 px-6 py-0.5 pt-1;
+}
 
-  /** 
+/** 
  * NAVIGATION ARROW
  */
 
-  .nav-arrow.icon__c {
-    @apply z-10 flex scale-y-[2] items-center;
-    @apply cursor-pointer;
-    @apply h-7 w-7;
-    @media screen(tab-sm) {
-      @apply h-9 w-9 p-1;
-    }
+.nav-arrow.icon__c {
+  @apply z-10 flex scale-y-[2] items-center;
+  @apply cursor-pointer;
+  @apply h-7 w-7;
+  @media screen(tab-sm) {
+    @apply h-9 w-9 p-1;
+  }
 
-    &.disabled {
-      @apply opacity-40;
-    }
-    &.left {
-      @apply left-0.5;
-    }
-    &.right {
-      @apply right-0.5;
-    }
-    &.bottom {
-      @apply absolute left-1/2 -translate-x-1/2 -translate-y-10 rotate-90;
-    }
-    &.flying {
-      @apply absolute top-1/2 -translate-y-1/2;
-      @apply scale-y-[2];
-    }
-    &.highlight {
-      @apply rounded-[50%];
-      .icon {
-        @apply translate-x-0.5;
-      }
-      &.left .icon {
-        @apply -translate-x-0.5;
-      }
-    }
-    &.primary {
-      background-color: #277881a1;
-    }
-    &.standard {
-      @apply border border-white-primary bg-white-primary/10;
-      .icon {
-        @apply bg-white-primary;
-      }
-    }
+  &.disabled {
+    @apply opacity-40;
+  }
+  &.left {
+    @apply left-0.5;
+  }
+  &.right {
+    @apply right-0.5;
+  }
+  &.bottom {
+    @apply absolute left-1/2 -translate-x-1/2 -translate-y-10 rotate-90;
+  }
+  &.flying {
+    @apply absolute top-1/2 -translate-y-1/2;
+    @apply scale-y-[2];
+  }
+  &.highlight {
+    @apply rounded-[50%];
     .icon {
-      @apply h-5 w-5;
+      @apply translate-x-0.5;
     }
+    &.left .icon {
+      @apply -translate-x-0.5;
+    }
+  }
+  &.primary {
+    background-color: #277881a1;
+  }
+  &.standard {
+    @apply border border-white-primary bg-white-primary/10;
+    .icon {
+      @apply bg-white-primary;
+    }
+  }
+  .icon {
+    @apply h-5 w-5;
   }
 }

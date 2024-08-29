@@ -1,20 +1,20 @@
 /* TAILWIND BASE */
 
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 /* INCLUDE / STATIC FILES */
 
-@import './include/fonts';
-@import './include/initial';
-@import './include/utilities';
+@import "./include/fonts";
+@import "./include/initial";
+@import "./include/utilities";
 
 /* CUSTOMIZABLE */
 
-@import './variables';
-@import './theme';
-@import './components';
+@import "./variables";
+@import "./theme";
+@import "./components";
 
 /*
 @import './customization';
